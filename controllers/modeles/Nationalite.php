@@ -97,7 +97,7 @@ class Nationalite {
     {
       $req=MonPdo::getInstance()->prepare("Select * from Nationalite where num= :id");
       $req->setFetchMode(PDO::FETCH_CLASS/PDO::FETCH_PROPS_LATE,'Nationalite');
-      $req->bimdParam(':id', $id);
+      $req->bindParam(':id', $id);
       $req->execute();
       $lesResultats=$req->fetch();
        return $lesResultats;
@@ -105,29 +105,29 @@ class Nationalite {
    /**
     * Permet d'ajouter une Nationalite 
     *
-    * @param continent $Nationalite Nationalite à ajouter
+    * @param Nationalite $Nationalite Nationalite à ajouter
     * @return integer resultat (1 si l'opération a reussi, 0 sinon)
     */
    public static function add(Nationalite $Nationalite) :int
    {
-    $req=MonPdo::getInstance()->prepare("insert into Nationalite(libelle,numcontinent) values(:libelle, :numcontinent) where num= :id");
-    $req->bimdParam(':libelle', $Nationalite->getLibelle());
-    $req->bimdParam(':numcontinent', $Nationalite->numcontinent());
+    $req=MonPdo::getInstance()->prepare("insert into Nationalite(libelle,numcontinent) values( :libelle, :numcontinent)");
+    $req->bindParam(':libelle', $Nationalite->getLibelle());
+    $req->bindParam(':numcontinent', $Nationalite->numcontinent);
     $nb=$req->execute();
      return $nb;
  }
  /**
   * Permet de modifier une Nationalite
   *
-  * @param continent $Nationalite Nationalite à modifier
+  * @param Nationalite $Nationalite Nationalite à modifier
   * @return integer resultat (1 si l'opération a reussi, 0 sinon)
   */
  public static function update(Nationalite $Nationalite) :int 
  {
   $req=MonPdo::getInstance()->prepare("update continent set libelle= :libelle where num= :id");
-  $req->bimdParam(':id', $Nationalite->getNum());
-  $req->bimdParam(':libelle', $Nationalite->getLibelle());
-  $req->bimdParam(':numcontinent', $Nationalite->numcontinent());
+  $req->bindParam(':id', $Nationalite->getNum());
+  $req->bindParam(':libelle', $Nationalite->getLibelle());
+  $req->bindParam(':numcontinent', $Nationalite->numcontinent);
   $nb=$req->execute();
   $lesResultats=$req->fetch();
    return $nb;
