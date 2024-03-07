@@ -51,7 +51,7 @@
   <body>
     
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
-  <a class="navbar-brand" href="#">Ma bibliothèque</a>
+  <a class="navbar-brand" href="index.php">Ma bibliothèque</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -83,13 +83,14 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-person"></i> Gestion des continent</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="index.php?uc=continent">Liste des contient </a>
+          <a class="dropdown-item" href="index.php?uc=continent&action=list">Liste des contient </a>
           <a class="dropdown-item" href="formAjoutAuteurs.php">Ajouter un contient</a>
           <a class="dropdown-item" href="#">Rechercher un contient</a>
     </ul>
   </div>
 </nav>
-        if(!empty($_SESSION['message'])){
+<?php
+        if (!empty($_SESSION['message'])){
           $mesMessages=$_SESSION['message'];
           foreach($mesMessages as $key=>$message){
             echo ' <div class="container pt-5">
@@ -102,3 +103,5 @@
           }
           $_SESSION['message']=[];
         }
+?>
+        

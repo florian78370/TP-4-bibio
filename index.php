@@ -1,5 +1,7 @@
 <?php session_start(); ?>
 <?php include "vues/header.php";
+include "modeles/continent.php";
+include "modeles/monPdo.php";
 
 $uc =empty($_GET['uc']) ? "accueil" : $_GET['uc'];
 
@@ -9,9 +11,8 @@ switch ($uc) {
         break;
     
     case 'continents' :
-        
+        include('controllers/continentController.php');
         break;
 }
 include "vues/footer.php";
-
 ?>
