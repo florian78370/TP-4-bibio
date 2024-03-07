@@ -9,6 +9,7 @@ switch ($uc) {
         break;
     
     case 'continents' :
+        
         break;
 }
 include "vues/footer.php";

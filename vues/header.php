@@ -83,7 +83,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-person"></i> Gestion des continent</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="listeAuteurs.php#">Liste des contient </a>
+          <a class="dropdown-item" href="index.php?uc=continent">Liste des contient </a>
           <a class="dropdown-item" href="formAjoutAuteurs.php">Ajouter un contient</a>
           <a class="dropdown-item" href="#">Rechercher un contient</a>
     </ul>
