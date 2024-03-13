@@ -76,7 +76,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-flag"></i>  Gestion des nationalités</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="listeNationalites.php">Liste des nationalités </a>
+          <a class="dropdown-item" href="Nationalite.php">Liste des nationalités </a>
           <a class="dropdown-item" href="formAjoutNationalites.php">Ajouter une nationalité</a>
         </div>
       </li>
@@ -84,7 +84,7 @@
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-person"></i> Gestion des continent</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="index.php?uc=continent&action=list">Liste des contient </a>
-          <a class="dropdown-item" href="formAjoutAuteurs.php">Ajouter un contient</a>
+          <a class="dropdown-item" href="index.php?uc=continent&action=add">Ajouter un contient</a>
           <a class="dropdown-item" href="#">Rechercher un contient</a>
     </ul>
   </div>

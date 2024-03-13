@@ -7,8 +7,8 @@
 class MonPdo
 {
 
-private static $serveur='mysql:host=localhost';
-private static $bdd='FORGETF=biblio'; 
+private static $serveur='mysql:host=btssio.dedyn.io';
+private static $bdd='dbname=FORGETF_bibio'; 
 private static $user='FORGETF' ; 
 private static $mdp='21/12/2004' ;
 private static $monPdo;

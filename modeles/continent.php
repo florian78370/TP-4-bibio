@@ -55,7 +55,7 @@ class continent {
     public static function findAll() :array
     {
        $req=MonPdo::getInstance()->prepare("Select * from continent");
-       $req->setFetchMode(PDO::FETCH_CLASS/PDO::FETCH_PROPS_LATE,'continent');
+       $req->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,'continent');
        $req->execute();
        $lesResultats=$req->fetchAll();
         return $lesResultats;
@@ -69,7 +69,7 @@ class continent {
     public static function findById(int $id) : continent 
     {
       $req=MonPdo::getInstance()->prepare("Select * from continent where num= :id");
-      $req->setFetchMode(PDO::FETCH_CLASS/PDO::FETCH_PROPS_LATE,'continent');
+      $req->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,'continent');
       $req->bindParam(':id', $id);
       $req->execute();
       $lesResultats=$req->fetch();
