@@ -16,5 +16,13 @@ switch($action){
     case 'delete' :    
     break;
     case 'valideForm' :    
+        $continent= new continent();
+        if(empty($_POST['num'])){
+        $continent->setLibelle($_POST['Libelle']);
+        $nb=Continent::add($continent);
+        $message = "modifié";
+        }else{
+            
+        }
     break;
 }
