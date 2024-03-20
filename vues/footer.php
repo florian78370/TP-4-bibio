@@ -1,3 +1,14 @@
+<div id="modalSuppression" class="modal fade" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-header">  
+      <h5 class="modal-title">Confirmation de suppression</h5>
+    </div>
+    <div class="modal-body">
+      <a href="" class="btn btn-secondary" id="btnSuppr" >Supprumer</a>
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Ne pas supprimer</a>
+    </div>
+  </div>
+</div>
 <footer class="container">
   <p>&copy; Florian Forget 2004</p>
 </footer>

@@ -23,7 +23,7 @@
         echo "<td class='col-md-4'>".$continent->getlibelle()."</td>";
         echo "<td class='col-md-2'>
         <a href='index.php?uc=continent&action=update&num=".$continent->getnum()."' class='btn btn-primary'><i class='fas fa-pen'></i></a>
-        <a href='#modalSuppression' data-toggle='modal' data-suppression='supprimerNationalite.php?num=".$continent->getnum()."' class='btn btn-danger'><i class='fas fa-trash-alt'></i></a>
+        <a href='#modalSuppression' data-toggle='modal' data-suppression='index.php?uc=continents&action=delete&num".$continent->getnum()."' class='btn btn-danger'><i class='fas fa-trash-alt'></i></a>
     </td>";
     echo "</tr>";
     }
