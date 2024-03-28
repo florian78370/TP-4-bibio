@@ -4,6 +4,7 @@ session_start(); ?>
 include "modeles/continent.php";
 include "modeles/monPdo.php";
 include "vues/messageFlash.php";
+include "modeles/Nationalite.php";
 
 $uc =empty($_GET['uc']) ? "accueil" : $_GET['uc'];
 

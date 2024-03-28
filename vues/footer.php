@@ -1,11 +1,16 @@
-<div id="modalSuppression" class="modal fade" role="dialog">
+<div id= "modalSuppression" class="modal fade">
   <div class="modal-dialog" role="document">
-    <div class="modal-header">  
-      <h5 class="modal-title">Confirmation de suppression</h5>
-    </div>
-    <div class="modal-body">
-      <a href="" class="btn btn-secondary" id="btnSuppr" >Supprumer</a>
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Ne pas supprimer</a>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmation de suppression</h5>
+      </div>
+      <div class="modal-body">
+        <p>Voulez-vous supprimer cette nationalité ?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="supprimerNationalite.php?num=" class="btn btn-primary" id="btnSuppr" >Supprimer</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ne pas supprimer</button>
+      </div>
     </div>
   </div>
 </div>
@@ -28,3 +33,5 @@ $("a[data-suppression]").click(function(){
 </script>
 </body>
 </html>
+<?php
+ob_end_flush();

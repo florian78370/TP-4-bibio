@@ -20,10 +20,10 @@
     foreach($lescontinent as $continent){
         echo "<tr class='d-flex'>";
         echo "<td class='col-md-2'>".$continent->getnum()."</td>";
-        echo "<td class='col-md-4'>".$continent->getlibelle()."</td>";
+        echo "<td class='col-md-9'>".$continent->getlibelle()."</td>";
         echo "<td class='col-md-2'>
         <a href='index.php?uc=continent&action=update&num=".$continent->getnum()."' class='btn btn-primary'><i class='fas fa-pen'></i></a>
-        <a href='#modalSuppression' data-toggle='modal' data-suppression='index.php?uc=continents&action=delete&num".$continent->getnum()."' class='btn btn-danger'><i class='fas fa-trash-alt'></i></a>
+        <a href='#modalSuppression' data-toggle='modal' date-message='Voulez vous supprimer ce conitnents ?'data-suppression='index.php?uc=continents&action=delete&num".$continent->getnum()."' class='btn btn-danger'><i class='fas fa-trash-alt'></i></a>
     </td>";
     echo "</tr>";
     }
