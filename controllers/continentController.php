@@ -11,6 +11,7 @@ switch($action){
     break;
     case 'update' :
         $mode="Modifier";
+        $continent=Continent::findById($_GET['num']);
         include('vues/formContinent.php');
     break;
     case 'delete' : 
@@ -24,6 +25,8 @@ switch($action){
     header('location : index.php?uc=continent&action=list');
     exit();
     break;
+
+
     case 'valideForm' :    
         $continent= new continent();
         if(empty($_POST['num'])){

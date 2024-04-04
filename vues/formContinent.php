@@ -15,4 +15,4 @@
     <div class="col"><button type='submit' class='btn btn-success btn-block'> <?php echo $mode ?> </button></div>
   </div>
 </form>
-</div>   
+</div>

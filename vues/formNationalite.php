@@ -1,17 +1,17 @@
 
 <div class="container mt-5">
-<h2 class='pt-3 text-center'> <?php echo $mode ?> une nationalité</h2>
+<h2 class='pt-3 text-center'> <?php echo $mode ?> un continent</h2>
 
-<form action="index.php?uc=nationalite&action=valideForm " method="post" 
+<form action="index.php?uc=continent&action=valideForm " method="post" 
   class="col-md-6 offset-md-3 border border-dark p-3">
   <div class="form-group">
     <label for='libelle'> Libellé </label>
-    <input type="text" class='form-control' id='libelle' placeholder='Saisir le libellé' name='libelle' value="<?php if($mode == "Modifier") {echo $Nationalite->getlibelle() ;}?>">
+    <input type="text" class='form-control' id='libelle' placeholder='Saisir le libellé' name='libelle' value="<?php if($mode == "Modifier") {echo $continent->getlibelle() ;}?>">
   </div>
 
-  <input type="hidden" id="num" name="num" value="<?php if($mode == "Modifier") {echo $Nationalite->getnum() ;}?>">
+  <input type="hidden" id="num" name="num" value="<?php if($mode == "Modifier") {echo $continent->getnum() ;}?>">
   <div class="row">
-    <div class="col"> <a href="index.php?uc=Nationalite&action=list" class='btn btn-warning btn-block'> Revenir à la liste</a></div>
+    <div class="col"> <a href="index.php?uc=continent&action=list" class='btn btn-warning btn-block'> Revenir à la liste</a></div>
     <div class="col"><button type='submit' class='btn btn-success btn-block'> <?php echo $mode ?> </button></div>
   </div>
 </form>
