@@ -1,3 +1,19 @@
+<div id="modalsupr" class="modal fade" role="document">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmation de suppression</h5>
+      </div>
+      <div class="modal-body"> 
+        <p>Voulez vous supprimer ce continent</p>
+      </div>
+      <div class="modal-footer">
+      <a href='' class="btn btn-primary" id='btnSuppr'>Supprimer</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ne pas supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
 <footer class="container">
   <p>&copy; FORGET FLorian 2024</p>
 </footer>

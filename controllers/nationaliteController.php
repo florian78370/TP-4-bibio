@@ -44,13 +44,13 @@ switch($action){
     $continent=Continent::findById($_POST['continent']);
     if(empty($_POST['num'])){
         $nationalite->setLibelle($_POST['libelle']);
-        $nationalite->setContinent($continent);
+        $nationalite->getContinent($continent);
         $nb=Nationalite::add($nationalite);
         $message = "ajouter";
     }else{
-        $nationalite->setNum($_POST['num']);
+        $nationalite->getNum($_POST['num']);
         $nationalite->setLibelle($_POST['libelle']);
-        $nationalite->setContinent($_POST['continent']);
+        $nationalite->getContinent($_POST['continent']);
         $nb=Nationalite::update($nationalite);
         $message = "modifié";
     }

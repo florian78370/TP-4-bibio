@@ -11,6 +11,7 @@
             <div class="form-group">
         <label for='continent'> Libellé </label>
         <select name="continent" class="form-control">
+            
         <?php
        foreach($lesnationalites as $nationalite){
         $selection=$nationalite->num == $nationaliteSel ? 'selected' : '';
